@@ -6,7 +6,22 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background-image: url('../src/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    text-shadow: -2px -2px black, -2px 2px black, 2px 2px black, 2px -2px black;
+    font-size: 3rem;
+}
+
+h1 img {
+    width: 3rem;
 }
 
 .content {
@@ -22,5 +37,13 @@ body {
         height: auto;
         margin: 1rem auto;
         border-radius: 1rem;
+    }
+
+    h1{
+        font-size: 4rem;
+    }
+
+    h1 img {
+        width: 4rem;
     }
 }

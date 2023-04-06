@@ -3,7 +3,16 @@ const pokeApi = {}
 
 function convertPokesApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
-    pokemon.number = pokeDetail.id
+
+    pokemon.number = pokeDetail.id;
+    if(pokemon.number >= 100){
+        pokemon.number = `${pokemon.number}`;
+    } else if (pokemon.number  >= 10){
+        pokemon.number = `0${pokemon.number}`;
+    } else {
+        pokemon.number = `00${pokemon.number}`;
+    }
+
     pokemon.name = pokeDetail.name
 
     const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
@@ -53,7 +62,16 @@ pokeApi.getPokemonDetail = (pokemon) => {
 
 function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon();
+
     pokemon.number = pokeDetail.id;
+    if(pokemon.number >= 100){
+        pokemon.number = `${pokemon.number}`;
+    } else if (pokemon.number  >= 10){
+        pokemon.number = `0${pokemon.number}`;
+    } else {
+        pokemon.number = `00${pokemon.number}`;
+    }
+
     pokemon.name = pokeDetail.name;
 
     const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
@@ -73,6 +91,5 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     let skills = pokeDetail.moves.map((moveSlot) => moveSlot.move.name);
     skills = skills.slice(0,4);
     pokemon.skills = skills;
-
     return pokemon;
 }

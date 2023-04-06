@@ -16,16 +16,25 @@
     border-radius: 1rem;
 }
 
+.pokemon:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgb(32, 32, 32);
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
 .pokemon .number {
     color: #000;
     opacity: .3;
     text-align: right;
-    font-size: .625rem;
+    font-size: 1rem;
 }
 
 .pokemon .name {
     text-transform: capitalize;
     color: #fff;
+    font-size: 1.2rem;
     margin-bottom: .25rem;
 }
 
@@ -46,7 +55,7 @@
     color: #fff;
     padding: .25rem .5rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: 1rem;
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
@@ -69,11 +78,19 @@
 .pagination button {
     padding: .25rem .5rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: 1rem;
     color: #fff;
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+}
+
+.pagination button:hover{
+    cursor: pointer;
+    border: 1px solid black;
+    transform: scale(1.1);
+    transition: all 0.3s;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.8);
 }
 
 

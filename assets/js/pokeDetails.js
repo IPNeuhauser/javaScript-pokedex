@@ -3,7 +3,7 @@ const pokemonContainer = document.querySelector("#pokemonList");
 
 pokemonContainer.addEventListener('click', function (element) {
     const pokemonSelected = element.target.closest('li');
-    const pokemonSelectedId = +pokemonSelected.querySelector('.number').innerText.substr(1,2);
+    const pokemonSelectedId = +pokemonSelected.querySelector('.number').innerText.substr(1,3);
     const limit = 1;
 
     if(pokemonSelectedId !== ''){
@@ -12,6 +12,11 @@ pokemonContainer.addEventListener('click', function (element) {
                 // console.log(pokemon[0])
                 const newHtml = addPokemonDetails(pokemon[0]);
                 pokemonSection.innerHTML = newHtml;
+                window.scrollBy({
+                    top: -9999999,
+                    left: 0,
+                    behavior: "smooth"
+                });
             });
     } 
 });
